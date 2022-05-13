@@ -16,11 +16,11 @@ interface CardProps {
 	color?: string;
 
 	/**
-	 * How large should the button be?
+	 * How large should the card be?
 	 */
 	size?: "small" | "medium" | "large";
 	/**
-	 * Button contents
+	 * Card contents
 	 */
 	label: string;
 	/**
