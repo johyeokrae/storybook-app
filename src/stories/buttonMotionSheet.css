@@ -1,0 +1,90 @@
+@keyframes bottomsheet_time {
+	0% {
+		bottom: -400px;
+	}
+
+	100% {
+		bottom: 0;
+	}
+}
+
+@keyframes dimmer_time {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 0.5;
+	}
+}
+
+#dimmer {
+	background: #000;
+	opacity: 0.5;
+	position: fixed;
+	/* important to use fixed, not absolute */
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	z-index: 9999;
+	animation: dimmer_time 2s;
+	/* may not be necessary */
+}
+
+#bottomsheet {
+	background: #fff;
+	position: fixed;
+	/* important to use fixed, not absolute */
+	bottom: 0;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	left: 10%;
+	width: 80%;
+	height: 50%;
+	display: none;
+	z-index: 9999;
+	animation: bottomsheet_time 2s;
+	/* may not be necessary */
+}
+
+#bar {
+	position: relative;
+	top: 10%;
+	margin: 0 auto;
+	width: 10%;
+	height: 5px;
+	background-color: #000;
+}
+
+.storybook-divBottomsheet {
+	font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	border: 0;
+	border-radius: 0.5em;
+	cursor: pointer;
+	display: inline-block;
+	line-height: 3;
+}
+.storybook-divBottomsheet--primary {
+	color: white;
+	background-color: #1ea7fd;
+}
+.storybook-divBottomsheet--secondary {
+	color: #333;
+	background-color: transparent;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+}
+.storybook-divBottomsheet--small {
+	font-size: 12px;
+	padding: 10px 16px;
+}
+.storybook-divBottomsheet--medium {
+	font-size: 14px;
+	padding: 11px 20px;
+}
+.storybook-divBottomsheet--large {
+	font-size: 16px;
+	padding: 12px 24px;
+}
