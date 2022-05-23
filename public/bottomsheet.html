@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #bottomSheetContainer {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      align-items: flex-end;
+      justify-content: center;
+      display: none;
+    }
+
+    #bottomSheetContainer.active {
+      display: flex;
+    }
+
+    #bottomSheet {
+      background-color: #fff;
+      width: 600px;
+      /* height: 300px; */
+      border-top-left-radius: 24px;
+      border-top-right-radius: 24px;
+      transform: translateY(100%);
+      transition: transform 0.4s ease-in-out;
+      font-size: 14px;
+    }
+
+    #bottomSheet.active {
+      transform: translateY(0);
+    }
+
+    #bottomSheet a {
+      color: #333;
+      text-decoration: none;
+      height: 40px;
+      border-bottom: 1px solid #ccc;
+      padding-left: 20px;
+      display: flex;
+      align-items: center;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #bottomSheet a:hover {
+      background-color: rgb(230, 230, 230);
+    }
+  </style>
+</head>
+
+<body>
+  <Button onclick="showBottomSheet()" showBottomSheet()>Show Bottom sheet</Button>
+
+  <div onclick="hideBottomSheet()" id="bottomSheetContainer">
+    <div id="bottomSheet">
+      <a href="">Edit</a>
+      <a href="">Delete</a>
+      <a href="">New</a>
+      <a href="">Cancel</a>
+    </div>
+
+    <script>
+      function showBottomSheet() {
+        let container = document.querySelector("#bottomSheetContainer")
+        let bottomSheet = document.querySelector("#bottomSheetContainer #bottomSheet")
+
+        container.classList.add("active");
+        setTimeout(() => {
+          bottomSheet.classList.add("active");
+        }, 100)
+      }
+
+      function hideBottomSheet() {
+        let container = document.querySelector("#bottomSheetContainer")
+        let bottomSheet = document.querySelector("#bottomSheetContainer #bottomSheet")
+
+        bottomSheet.classList.remove("active");
+        setTimeout(() => {
+          container.classList.remove("active");
+        }, 100)
+      }
+    </script>
+</body>
+
+</html>
