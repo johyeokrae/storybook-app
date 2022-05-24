@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 const Dim = styled(motion.div)`
 	position: relative;
@@ -231,7 +231,7 @@ export const BottomSheetMenu = ({
 						</ItemGroup>
 						<ItemGroup>
 							<Item>
-								{props.Image8 == ""
+								{props.Image8 === ""
 									? ""
 									: `<img src={props.Image8} alt="Image8" />`}
 							</Item>

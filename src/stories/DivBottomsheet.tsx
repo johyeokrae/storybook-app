@@ -1,11 +1,6 @@
 import * as React from "react";
-import {
-	useMotionValue,
-	useTransform,
-	useAnimation,
-	motion,
-} from "framer-motion";
-import styled, { keyframes } from "styled-components";
+import { motion } from "framer-motion";
+import styled from "styled-components";
 
 interface DivBottomsheetProps {
 	/**

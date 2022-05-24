@@ -1,11 +1,6 @@
 import React, { useState } from "react";
-import {
-	useMotionValue,
-	useTransform,
-	useAnimation,
-	motion,
-} from "framer-motion";
-import styled, { keyframes } from "styled-components";
+import { motion } from "framer-motion";
+// import styled from "styled-components";
 
 interface ButtonMotionSheetProps {
 	/**
@@ -48,9 +43,6 @@ export const ButtonMotionSheet = ({
 	...props
 }: ButtonMotionSheetProps) => {
 	const [isOpen, setIsOpen] = useState(false);
-
-	const Dim = styled(motion.div)``;
-	const BottomSheet = styled(motion.div)``;
 
 	const variantsDim = {
 		open: { opacity: 0.5, display: "block" },

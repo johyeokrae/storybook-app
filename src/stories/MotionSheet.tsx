@@ -1,11 +1,6 @@
-import React, { useState } from "react";
-import {
-	useMotionValue,
-	useTransform,
-	useAnimation,
-	motion,
-} from "framer-motion";
-import styled, { keyframes } from "styled-components";
+import React from "react";
+import { motion } from "framer-motion";
+// import styled from "styled-components";
 
 interface MotionSheetProps {
 	primary?: boolean;
@@ -34,24 +29,6 @@ export const MotionSheet = ({
 	handle = "none",
 	...props
 }: MotionSheetProps) => {
-	const [isOpen, setIsOpen] = useState(false);
-
-	const Dim = styled(motion.div)`
-		color: white;
-		background-color: gray;
-		width: 100vw;
-		height: 100vh;
-	`;
-	const BottomSheet = styled(motion.div)`
-		color: white;
-		background-color: black;
-		font-size: 20px;
-		width: 300px;
-		height: 1000px;
-		text-align: center;
-		margin: 0 auto;
-	`;
-
 	return (
 		<>
 			<motion.div
